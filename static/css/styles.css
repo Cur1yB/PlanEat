@@ -1,0 +1,155 @@
+/*<-------------------------------- РЕГИСТРАЦИЯ/ВХОД ------------------------------------------->*/
+/* Общие стили для контейнера формы */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/* Общие стили для заголовка формы */
+.form-container h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Общие стили для формы */
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Общие стили для полей ввода и меток */
+.form-container label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Общие стили для кнопки формы */
+.form-container button, .button-login {
+    margin-top: 20px; /* Увеличиваем верхний отступ для отцентровки кнопки */
+    width: 100%; /* Задаем ширину кнопки на 100% контейнера */
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #0044cc 0%, #0022aa 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.form-container button:hover {
+    background: linear-gradient(135deg, #0022aa 0%, #001188 100%);
+}
+
+.button-login:hover {
+    background: linear-gradient(135deg, #0022aa 0%, #001188 100%);
+    transform: scale(1.05); /* Увеличим размер кнопки на 5% */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Добавим тень при наведении */
+}
+
+/* Специфические стили для формы регистрации */
+.registration-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.form-errors {
+    color: #f44336; /* Красный цвет для ошибок */
+    background-color: #ffd2d2; /* Светло-красный фон для ошибок */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ff0000;
+    font-size: 14px;
+}
+
+.form-input {
+    /* Ваши стили для поля формы */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/*<-------------------------------- ДАШБОРД ------------------------------------------->*/
+.dashboard-container {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Стили для заголовка дашборда */
+.dashboard-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.dashboard-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Стили для кнопок на дашборде */
+.dashboard-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #0044cc 0%, #0022aa 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-button:hover {
+    background: linear-gradient(135deg, #0022aa 0%, #001188 100%);
+}
+
+.dashboard-button-delete {
+    margin: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #d43d3d 0%, #d95d7e 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-button-delete:hover {
+    background: linear-gradient(135deg, #f83131 0%, #ff0000 100%);
+}

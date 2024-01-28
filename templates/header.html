@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanEat - планируйте питание</title>     
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="Logo">
+        </div>
+        <nav>
+            {% if user.is_authenticated %}
+                <ul class="nav-list">
+                    <!-- Ссылки для аутентифицированных пользователей -->
+                    <li class="nav-item"><a class="button-header" href="/dashboard/">Домой</a></li>
+                    <!-- Другие ссылки для аутентифицированных пользователей -->
+                    <li class="nav-item"><a class="button-header" href="{% url 'logout' %}">Выход</a></li>
+                </ul>
+            {% else %}
+                <ul class="nav-list">
+                    <!-- Ссылки для неаутентифицированных пользователей -->
+                    <li class="nav-item"><a class="button-header" href="/">Домой</a></li>
+                    <li class="nav-item"><a class="button-header" href="{% url 'registration' %}">Регистрация</a></li>
+                    <li class="nav-item"><a class="button-header" href="{% url 'login' %}">Войти</a></li>
+                    <!-- Другие ссылки для неаутентифицированных пользователей -->
+                </ul>
+            {% endif %}
+        </nav>
+    </header>
+</body>
+</html>

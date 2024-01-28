@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="dashboard-container">
+    <h1>Добро пожаловать, {{ user.username }}!</h1>
+    <p>Ваш персональный кабинет</p>
+    
+    <div class="dashboard-buttons">
+        <a href="{% url 'preferences' %}" class="dashboard-button">Изменить план питания</a>
+        <a href="{% url 'change_username' %}" class="dashboard-button">Изменить логин</a>
+        <a href="{% url 'change_password' %}" class="dashboard-button">Изменить пароль</a>
+        <a href="{% url 'delete_profile' %}" class="dashboard-button-delete">Удалить профиль</a>
+    </div>
+</div>
+{% endblock %}

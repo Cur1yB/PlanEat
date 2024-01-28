@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="form-container">
+    <h1>Регистрация</h1>
+    <form method="post" action="{% url 'registration' %}">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        
+        {{ form.username.label_tag }} {{ form.username }}
+        {{ form.username.errors }}
+        
+        {{ form.email.label_tag }} {{ form.email }}
+        {{ form.email.errors }}
+        
+        {{ form.password1.label_tag }} {{ form.password1 }}
+        {{ form.password1.errors }}
+        
+        {{ form.password2.label_tag }} {{ form.password2 }}
+        {{ form.password2.errors }}
+
+        <button type="submit" class="button-login">Зарегистрироваться</button>
+    </form>
+</div>
+{% endblock %}

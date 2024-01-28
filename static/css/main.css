@@ -1,0 +1,52 @@
+header {
+    background-image: url("/static/images/background.png");
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    height: 300px; 
+    display: flex; 
+    align-items: center; 
+    padding: 10px 20px;
+}
+
+.logo img {
+    max-height: 150px;
+}
+
+.button-header {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff; /* Изменим цвет текста на белый */
+    border: none;
+    border-radius: 10px; /* Уменьшим скругление кнопок */
+    text-decoration: none;
+    margin-right: 30px;
+    background: linear-gradient(135deg, #0044cc 0%, #0022aa 100%); /* Изменим цвета градиента на более глубокий синий */
+    font-family: 'rosarium';
+    transition: transform 0.2s, box-shadow 0.2s; /* Добавим анимацию для увеличения и тени при наведении */
+}
+
+.button-header:hover {
+    background: linear-gradient(135deg, #0022aa 0%, #001188 100%); /* Изменим цвета градиента при наведении */
+    transform: scale(1.05); /* Увеличим размер кнопки на 5% */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Добавим тень при наведении */
+}
+
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+}
+
+.nav-item {
+    display: inline;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.logo {
+    margin-right: auto;
+}
