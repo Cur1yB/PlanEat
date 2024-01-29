@@ -153,3 +153,99 @@
 .dashboard-button-delete:hover {
     background: linear-gradient(135deg, #f83131 0%, #ff0000 100%);
 }
+
+/*<-------------------------------- ПЛАН ПИТАНИЯ ------------------------------------------->*/
+
+.form-container-meal {
+    max-width: 600px; /* Или любая другая ширина, которая вам подходит */
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container-meal h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container-meal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container-meal label {
+    display: block; /* Делает метку блочным элементом, что позволяет следующему элементу (полю ввода) начинаться с новой строки */
+    margin-top: 10px;
+    margin-bottom: 5px; /* Отступ перед полем ввода */
+    font-weight: bold; /* Делает текст метки жирным */
+}
+
+.form-container-meal input[type="text"],
+.form-container-meal input[type="email"],
+.form-container-meal input[type="password"],
+.form-container-meal input[type="number"],
+.form-container-meal input[type="date"],
+.form-container-meal input[type="time"],
+.form-container-meal select,
+.form-container-meal textarea {
+    width: 100%; /* Заставляет поле ввода занимать всю ширину контейнера, чтобы оно не было рядом с меткой */
+    padding: 10px;
+    margin-bottom: 10px; /* Отступ после поля ввода */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-container-meal .checkbox-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container-meal .checkbox-group label {
+    margin: 0; /* Убираем отступы для меток чекбоксов */
+}
+
+.form-container-meal .checkbox-group input[type="checkbox"] {
+    margin-right: 10px; /* Добавляем отступ справа от чекбокса */
+}
+
+/* Если у вас есть специальные стили для кнопок или других элементов, добавьте их здесь */
+
+
+.form-container-meal button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin: 0 auto; /* Центрируем кнопку по горизонтали внутри контейнера */
+}
+
+.form-container-meal button:hover {
+    background-color: #45a049;
+}
+
+.form-container-meal .button-save {
+    width: 100%; /* Занимает всю ширину контейнера */
+    text-align: center; /* Текст на кнопке по центру */
+}
+
+/* Убрать стрелки у input[type="number"] */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}

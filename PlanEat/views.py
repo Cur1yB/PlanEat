@@ -4,8 +4,9 @@ from django.contrib.auth import update_session_auth_hash, authenticate, login as
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
-from .forms import CustomUserCreationForm, ConfirmPasswordForm, UsernameChangeForm, UserPreferencesForm
-from .models import UserPreferences
+from .forms import (CustomUserCreationForm, ConfirmPasswordForm, UsernameChangeForm, UserPreferencesForm, 
+                    MealPlanForm)
+from .models import UserPreferences, MealPlan
 
 def home(request):
     return render(request, 'home.html')
@@ -101,6 +102,34 @@ def user_preferences(request):
     else:
         form = UserPreferencesForm(instance=preferences)
     return render(request, 'preferences.html', {'form': form})
+
+@login_required
+def create_meal_plan(request):
+    if request.method == 'POST':
+        form = MealPlanForm(request.POST)
+        if form.is_valid():
+            meal_plan = form.save(commit=False)
+            meal_plan.user = request.user
+            meal_plan.save()
+            form.save_m2m()  # Сохранение связанных блюд
+            # Здесь можно добавить расчет калорий
+            return redirect('dashboard')
+    else:
+        form = MealPlanForm()
+    return render(request, 'meal_plan_form.html', {'form': form})
+
+@login_required
+def edit_meal_plan(request, meal_plan_id):
+    meal_plan = MealPlan.objects.get(id=meal_plan_id, user=request.user)
+    if request.method == 'POST':
+        form = MealPlanForm(request.POST, instance=meal_plan)
+        if form.is_valid():
+            form.save()
+            # Обновление калорий можно выполнить здесь
+            return redirect('dashboard')
+    else:
+        form = MealPlanForm(instance=meal_plan)
+    return render(request, 'meal_plan_form.html', {'form': form})
 '''
 Пользователи
 Л: test06

@@ -14,6 +14,8 @@ urlpatterns = [
     path('delete-profile/', views.delete_profile, name='delete_profile'),
     path('change-username/', views.change_username, name='change_username'),
     path('preferences/', views.user_preferences, name='preferences'),
+    path('create-meal-plan/', views.create_meal_plan, name='create_meal_plan'),
+    path('edit-meal-plan/<int:meal_plan_id>/', views.edit_meal_plan, name='edit_meal_plan'),
     # Добавление маршрута для выхода
     path('logout/', LogoutView.as_view(next_page='/'), name='logout'),
 ]

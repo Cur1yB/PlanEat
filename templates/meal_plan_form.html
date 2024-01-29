@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="form-container-meal">
+    <h1>Создать/Изменить План Питания</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>
+            <label for="id_status">Статус:</label>
+            {{ form.status }}
+        </div>
+        <div class="container-button-save">
+            <button class="button-save">Сохранить</button>
+        </div>
+    </form>
+
+</div>
+{% endblock %}

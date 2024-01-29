@@ -6,7 +6,8 @@
     <p>Ваш персональный кабинет</p>
     
     <div class="dashboard-buttons">
-        <a href="{% url 'preferences' %}" class="dashboard-button">Изменить план питания</a>
+        <a href="{% url 'create_meal_plan' %}" class="dashboard-button">Изменить план питания</a>
+        <a href="{% url 'preferences' %}" class="dashboard-button">Изменить настройки плана питания</a>
         <a href="{% url 'change_username' %}" class="dashboard-button">Изменить логин</a>
         <a href="{% url 'change_password' %}" class="dashboard-button">Изменить пароль</a>
         <a href="{% url 'delete_profile' %}" class="dashboard-button-delete">Удалить профиль</a>
