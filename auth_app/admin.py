@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Profile, MealPlan
+from .models import Profile 
+from recommendations_app.models import MealPlan
 
 admin.site.register(Profile)
 

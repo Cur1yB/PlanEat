@@ -1,9 +1,8 @@
-# myproject/urls.py
+# PlanEat/urls.py
 
 from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('PlanEat.urls')),  # Подключение URL-маршрутов приложения
+    path('', include('PlanEat.urls')), 
 ]
